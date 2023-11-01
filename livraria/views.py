@@ -12,13 +12,6 @@ from livraria.serializers import CategoriaSerializer, EditoraSerializer, AutorSe
 
 
 
-
-
-
-class AutorViewSet(ModelViewSet):
-    queryset = Autor.objects.all()
-    serializer_class = AutorSerializer
-
 class LivroViewSet(ModelViewSet):
     queryset = Livro.objects.all()
     serializer_class = LivroSerializer
