@@ -10,6 +10,8 @@ dependencies = [
     "djangorestframework>=3.14.0",
     "python-magic>=0.4.27",
     "Pillow>=10.1.0",
+    "python-dotenv>=1.0.0",
+    "netifaces>=0.11.0",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
@@ -18,3 +20,7 @@ license = {text = "MIT"}
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
+
+[tool.pdm.scripts]
+pre_dev = "python ./scripts/set_my_ip.py"
+dev = "python manage.py runserver 0.0.0.0:19003"
