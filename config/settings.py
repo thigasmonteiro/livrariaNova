@@ -20,10 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Application definition
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
-
-    ),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
@@ -36,7 +32,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
-    "rest_framework_simplejwt",
     "corsheaders",
     "drf_spectacular",
     "rest_framework",
