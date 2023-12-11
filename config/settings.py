@@ -9,8 +9,9 @@ MODE = os.getenv("MODE")
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG", "False")
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ["http://localhost:3000", "http://localhost:5173", "http://localhost:8000", "https://*.fl0.io/"]
+CORS_ALLOW_ALL_ORIGINS = True
 
 from pathlib import Path
 
@@ -151,8 +152,6 @@ else:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
-
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=380),
     "REFRESH_TOKEN_LIFETIME":timedelta(days=7),
@@ -160,4 +159,3 @@ SIMPLE_JWT = {
 
 print(MODE, MEDIA_URL, DATABASES)
 
-CORS_ALLOW_ALL_ORIGINS = True
