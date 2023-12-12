@@ -6,3 +6,4 @@ class EditoraSerializer(ModelSerializer):
     class Meta:
         model = Editora
         fields = "__all__"
+        depth =    1
