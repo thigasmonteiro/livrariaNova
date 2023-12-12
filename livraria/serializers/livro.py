@@ -31,5 +31,5 @@ class LivroDetailSerializer(ModelSerializer):
 class LivroListSerializer(ModelSerializer):
     class Meta:
         model = Livro
-        fields = ["titulo", "isbn", "categoria", "editora"]
+        fields = "__all__"
         depth = 1
