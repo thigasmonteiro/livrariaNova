@@ -1,5 +1,5 @@
 from django.db import models
-from livraria.models import Autor, Categoria, Editora
+from livraria.models import  Categoria, Editora
 from uploader.models import Image
 
 class Livro(models.Model):
@@ -12,9 +12,9 @@ class Livro(models.Model):
     
     #Chave estrangeira categoria e editora
     categoria = models.ForeignKey(
-        Categoria, on_delete=models.PROTECT, related_name="livros"
+        Categoria, on_delete=models.PROTECT, related_name="livro"
     )
-    editora = models.ForeignKey(Editora, on_delete=models.PROTECT, related_name="livros"
+    editora = models.ForeignKey(Editora, on_delete=models.PROTECT, related_name="livro"
     )
     capa = models.ForeignKey(
           Image,
